@@ -1,15 +1,15 @@
 [package]
 name = "mail-threading"
-version = "0.1.0"
+version = "0.1.1"
 edition = "2021"
 license = "MIT OR Apache-2.0"
 rust-version = "1.88"
 repository = "https://github.com/planetaryescape/mail-threading"
 homepage = "https://github.com/planetaryescape/mail-threading"
 documentation = "https://docs.rs/mail-threading"
-description = "Spec-aligned client-side email threading using RFC 5256/JWZ references."
+description = "JWZ email threading (RFC 5256). Reconstruct message threads from References/In-Reply-To headers, with subject fallback for broken clients."
 readme = "README.md"
-keywords = ["email", "threading", "jwz", "imap", "rfc5256"]
+keywords = ["jwz", "email", "threading", "imap", "rfc5256"]
 categories = ["algorithms", "email"]
 include = [
     "Cargo.toml",
