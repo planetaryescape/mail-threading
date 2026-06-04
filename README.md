@@ -38,8 +38,8 @@ subjects.
 
 `mail-threading` is extracted from `mxr`, where local threading is required for
 providers without native thread IDs. The shared JSON conformance corpus is
-part of the package so other implementations, including a future TypeScript
-port, can test against the same behavior.
+part of the package so another implementation can test against the same
+behavior.
 
 ## Scope
 
@@ -198,7 +198,7 @@ Default subject normalization handles common RFC 5256 artifacts such as `Re:`,
 and several localized reply prefixes. Custom prefixes can be supplied through
 `ThreadingOptions::subject_prefixes`.
 
-## In real life
+## Recipes
 
 ### Thread a mailbox import
 
@@ -266,7 +266,7 @@ let threads = thread_messages_with(
 What you get: threads built only from `Message-ID`, `References`, and
 `In-Reply-To`, without subject-only merges.
 
-### Check the published corpus
+### Run the conformance corpus
 
 ```bash
 cargo test -p mail-threading --all-features --tests
@@ -333,9 +333,9 @@ threads and members.
 - `serde`: derives `Serialize` and `Deserialize` for public input and output
   types.
 
-## Minimum supported Rust version
+## Minimum Supported Rust Version
 
-The current MSRV is Rust 1.88.
+This release supports Rust 1.88 and newer.
 
 ## Versioning
 
