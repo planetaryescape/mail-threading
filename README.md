@@ -31,10 +31,10 @@ mail-threading = { version = "0.1", features = ["serde"] }
 
 ## Why this exists
 
-Rust has mature email parsers and transport clients, but it has not had a
-small maintained crate focused on local RFC 5256/JWZ thread reconstruction.
-Projects that need this behavior have typically had to embed an app-specific
-implementation.
+Provider-native thread IDs are not always available, portable, or trustworthy
+across imports. Local clients still need a deterministic fallback built from
+RFC 5322 metadata: `Message-ID`, `In-Reply-To`, `References`, dates, and
+subjects.
 
 `mail-threading` is extracted from `mxr`, where local threading is required for
 providers without native thread IDs. The shared JSON conformance corpus is
